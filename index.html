@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Challenge 7</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+      body{
+        background: linear-gradient(to right, red, blue);
+      }
+
+      .content {
+        border:1px solid;
+        border-radius: 10px;
+        margin-top: 30px;
+        background-color: #eee
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 text-center content">
+          <h2>Temperature Converter</h2>
+
+          <form action="">
+            <div class="form-group">
+              <label for="userInput"> Enter your number to convert:</label>
+              <input type="number" id="userInput">
+            </div>
+            <div class="form-group">
+              <input type="button" value="to Celsius" onclick="toCelsius()">
+              <input type="button" value="to Fahrenheit" onclick="toFahrenheit()">
+            </div>
+          </form>
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      function toCelsius() {
+        var celsius = (document.getElementById('userInput').value -32) * 5 / 9;
+        celsius = Math.round(celsius);
+        document.getElementById('result').innerHTML = userInput.value + " Fahrenheit is " + celsius + " Celsius";
+      }
+
+      function toFahrenheit() {
+        var fahrenheit = document.getElementById('userInput').value * 9 / 5 +32;
+        fahrenheit = Math.round(fahrenheit);
+        document.getElementById('result').innerHTML = userInput.value + " Celsius is " + fahrenheit + " Fahrenheit";
+      }
+
+    </script>
+
+  </body>
+</html>
